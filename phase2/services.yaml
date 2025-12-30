@@ -1,0 +1,33 @@
+discover_patterns:
+  name: Discover Patterns
+  description: Manually trigger pattern discovery
+  fields:
+    days:
+      name: Days
+      description: Days of history to analyze
+      default: 30
+      selector:
+        number:
+          min: 7
+          max: 365
+    incremental:
+      name: Incremental
+      description: Process only new data since last run
+      default: false
+      selector:
+        boolean:
+
+export_patterns:
+  name: Export Patterns
+  description: Export discovered patterns for Claude Code
+
+clear_patterns:
+  name: Clear Patterns  
+  description: Clear all discovered patterns (requires confirmation)
+  fields:
+    confirm:
+      name: Confirm
+      description: Must be true to proceed
+      required: true
+      selector:
+        boolean:
