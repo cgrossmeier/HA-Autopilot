@@ -66,20 +66,3 @@ We're approaching this as a proper engineering project, not a hack. Each phase b
 
 **Phase 6** creates the dashboard interface where all of this surfaces in your Home Assistant UI. A custom Lovelace card shows pending suggestions, lets you approve or reject them, and provides feedback that helps the system learn your preferences over time.
 
-## What You'll Need
-
-A Home Assistant installation running on hardware that can handle Claude Code. A Raspberry Pi 4 with 4GB RAM works. A mini PC or NAS is better. You need enough storage to run a local language model, which means at least 32GB free space.
-
-Basic familiarity with Home Assistant's file structure helps, but we'll walk through everything. If you can SSH into your server and edit a configuration file, you have enough skill to follow along.
-
-The rest is patience. The system needs a few weeks of observation data before it can identify reliable patterns. You can't rush behavioral analysis. But once it learns your routines, the automation suggestions start flowing.
-
-## What Happens Next
-
-We start with Phase 1 next week: building the data extraction pipeline. You'll see exactly what patterns exist in your home's state history and understand how the Observer identifies significant events.
-
-Each subsequent phase adds another layer of intelligence until you have a fully functional AI automation architect running locally on your network.
-
-By the end of this project, your smart home will actually be smart. Not because you programmed every possible scenario, but because it learned to recognize what you do and handle it automatically.
-
-Your lights will adjust themselves. Your doors will lock on schedule. Anomalies will get flagged. And you'll finally stop using that expensive smart home hardware as a glorified remote control.
