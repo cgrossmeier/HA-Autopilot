@@ -1,6 +1,7 @@
 """
 Database connection layer for HA-Autopilot.
 Supports SQLite and MariaDB/MySQL backends with automatic fallback.
+Change MariaDB Database Connection String in Line 62  mariadb_url = "mysql+pymysql://[user]:[password]@[serverip]/ha_autopilot?charset=utf8mb4"
 """
 
 import os
