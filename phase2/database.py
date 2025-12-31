@@ -1,7 +1,7 @@
 """
 Database connection layer for HA-Autopilot.
 Supports SQLite and MariaDB/MySQL backends with automatic fallback.
-Change MariaDB Database Connection String in Line 62  mariadb_url = "mysql+pymysql://[user]:[password]@[serverip]/ha_autopilot?charset=utf8mb4"
+Change MariaDB Database Connection String in Line 62  mariadb_url = "mysql+pymysql://DB_USER:DB_PASSWORD@DB_HOST/DB_NAME?charset=utf8mb4"
 """
 
 import os
@@ -59,7 +59,7 @@ class DatabaseConnector:
         Tries MariaDB first (if it has HA data), then falls back to SQLite.
         """
         # Try MariaDB first
-        mariadb_url = "mysql+pymysql://[user]:[password]@[serverip]/ha_autopilot?charset=utf8mb4"
+        mariadb_url = "mysql+pymysql://DB_USER:DB_PASSWORD@DB_HOST/DB_NAME?charset=utf8mb4"
         try:
             test_engine = create_engine(mariadb_url, pool_pre_ping=True)
             with test_engine.connect() as conn:
