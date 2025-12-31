@@ -70,39 +70,37 @@ HA-Autopilot is a two-phase system that automatically discovers automation oppor
 ### System Components
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                  HA-AUTOPILOT SYSTEM                    │
-├─────────────────────────────────────────────────────────┤
-│                                                          │
-│  ┌────────────────────────────────────────────────┐    │
-│  │             PHASE 1: DATA PIPELINE              │    │
-│  ├────────────────────────────────────────────────┤    │
-│  │                                                  │    │
-│  │  1. Database Connector (SQLite/MariaDB)        │    │
-│  │  2. Entity Classifier (High/Medium/Low Signal) │    │
-│  │  3. State Change Extractor (LAG window)        │    │
-│  │  4. Context Builder (Temporal + Environmental)  │    │
-│  │  5. Noise Filter (Flapping detection)          │    │
-│  │  6. Data Exporter (JSONL format)               │    │
-│  │                                                  │    │
-│  │  Output: 3,229 events from 189 entities        │    │
-│  └────────────────────────────────────────────────┘    │
-│                          ↓                              │
-│  ┌────────────────────────────────────────────────┐    │
-│  │          PHASE 2: PATTERN RECOGNITION           │    │
-│  ├────────────────────────────────────────────────┤    │
-│  │                                                  │    │
-│  │  1. Temporal Analyzer (Time-based patterns)     │    │
-│  │  2. Sequential Analyzer (A→B sequences)        │    │
-│  │  3. Conditional Analyzer (If-then rules)        │    │
-│  │  4. Automation Generator (YAML output)          │    │
-│  │  5. Backup System (Safety)                      │    │
-│  │  6. Report Generator (Documentation)            │    │
-│  │                                                  │    │
-│  │  Output: 2,824 patterns, 145 automations       │    │
-│  └────────────────────────────────────────────────┘    │
-│                                                          │
-└─────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────┐
+│                  HA-AUTOPILOT SYSTEM                 │
+├──────────────────────────────────────────────────────┤
+│  ┌────────────────────────────────────────────────┐  │
+│  │             PHASE 1: DATA PIPELINE             │  │
+│  ├────────────────────────────────────────────────┤  │
+│  │                                                │  │
+│  │  1. Database Connector (SQLite/MariaDB)        │  │
+│  │  2. Entity Classifier (High/Medium/Low Signal) │  │
+│  │  3. State Change Extractor (LAG window)        │  │
+│  │  4. Context Builder (Temporal + Environmental) │  │
+│  │  5. Noise Filter (Flapping detection)          │  │
+│  │  6. Data Exporter (JSONL format)               │  │
+│  │                                                │  │
+│  │  Output: 3,229 events from 189 entities        │  │
+│  └────────────────────────────────────────────────┘  │
+│                          ↓                           │
+│  ┌────────────────────────────────────────────────┐  │
+│  │          PHASE 2: PATTERN RECOGNITION          │  │
+│  ├────────────────────────────────────────────────┤  │
+│  │                                                │  │
+│  │  1. Temporal Analyzer (Time-based patterns)    │  │
+│  │  2. Sequential Analyzer (A→B sequences)        │  │
+│  │  3. Conditional Analyzer (If-then rules)       │  │
+│  │  4. Automation Generator (YAML output)         │  │
+│  │  5. Backup System (Safety)                     │  │
+│  │  6. Report Generator (Documentation)           │  │
+│  │                                                │  │
+│  │  Output: 2,824 patterns, 145 automations       │  │
+│  └────────────────────────────────────────────────┘  │
+└──────────────────────────────────────────────────────┘
 ```
 
 ### Data Flow
@@ -905,4 +903,5 @@ Confidence Threshold: 90%
 *End of Implementation Guide*
 
 *For support and troubleshooting, refer to PHASE2_COMPLETE.md and PHASE2_README.md*
+
 
