@@ -58,7 +58,7 @@ class DatabaseConnector:
         Tries MariaDB first (if it has HA data), then falls back to SQLite.
         """
         # Try MariaDB first
-        mariadb_url = "mysql+pymysql://ha-admin:Rad3BMW!2025@192.168.1.81/ha_autopilot?charset=utf8mb4"
+        mariadb_url = "mysql+pymysql://[user]:[password]@[serverip]/ha_autopilot?charset=utf8mb4"
         try:
             test_engine = create_engine(mariadb_url, pool_pre_ping=True)
             with test_engine.connect() as conn:
