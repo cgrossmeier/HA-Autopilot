@@ -1022,7 +1022,7 @@ google-generativeai>=0.3.0  # Google Gemini SDK (optional)
 | Approval Rate | > 40% | Suggestions approved by users |
 | LLM Call Latency (local) | < 5 seconds | 95th percentile |
 | LLM Call Latency (cloud) | < 3 seconds | 95th percentile |
-| False Positive Rate | < 20% | Suggestions users find irrelevant |
+| False Positive Rate | < 10% | Suggestions users find irrelevant |
 
 ---
 
