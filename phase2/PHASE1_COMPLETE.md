@@ -32,7 +32,7 @@
 
 ### Database Configuration
 - **Primary**: SQLite at `/config/home-assistant_v2.db` ✓
-- **Fallback**: MariaDB at `192.168.1.81` (configured, empty)
+- **Fallback**: MariaDB at `[server-ip-address]` (configured, empty)
 - **Auto-Detection**: Smart fallback checks for data before selecting DB
 
 ---
